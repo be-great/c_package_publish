@@ -117,8 +117,16 @@ Run make to build your shared library:
 
 ## Step 9: publish it on github repo
 
-    1- upload the mylibrary.deb
-    2- push the package as a version 
+ 1- upload the mylibrary.deb
+    
+    $ git add mylibrary.deb
+    $ git commit -m "add the package" 
+    $ git push
+ 2- release the package 
 
-    $ git tag -a v<version> -m "Release version 1.0"
-    $ git push origin v1.0
+    A- Go to your GitHub repository.
+    B- Click on the "Releases" tab.
+    C- Click on "Draft a new release."
+    D- Tag version should be the version you just created (v<version>).
+    E- Title and description can be filled in with relevant information.
+    F- Attach your Debian package (.deb file) to the release.
