@@ -1,6 +1,6 @@
 # Adding c project using APT package installer
  
- Example function that add two number
+ Example function that adds two number
 
 ## Step 1: Organize Your Project
 
@@ -23,6 +23,7 @@ Create a directory structure for your project:
 Inside the DEBIAN directory, create a control file:
 
     $ vim control
+<be>
 
     Package: mylibrary
     Version: 1.0
@@ -33,7 +34,7 @@ Inside the DEBIAN directory, create a control file:
 ## Step 3: Write Header and Source Files
 
     $ vim usr/include/ahedlib.h
--
+<br>
 
     #ifndef MAIN_H
     #define MAIN_H
@@ -41,10 +42,12 @@ Inside the DEBIAN directory, create a control file:
     int _add(int a, int b);
 
     #endif /* MAIN_H */
--
+<br>
+
 
     $ vim src/_add.c
--
+<br>
+
 
     #include "main.h"
     int _add(int a, int b)
@@ -57,7 +60,8 @@ Inside the DEBIAN directory, create a control file:
 Create a Makefile to compile your code:
 
     $ vim Makefile
--
+<br>
+
 
     CC=gcc
     CFLAGS=-Wall
@@ -94,7 +98,8 @@ Run make to build your shared library:
 ## Step 8: use it on your program 
 
     $ vim main.c
--
+<br>
+
 
     #include <ahedlib.h>
     #include <stdio.h>
@@ -105,7 +110,8 @@ Run make to build your shared library:
         return 0;
     }
 
--
+<br>
+
 
     $ gcc main.c -o main -l mylibrary
 
