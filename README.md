@@ -1,5 +1,7 @@
-# c_tool
-function that add two number
+# Adding c project using APT package installer
+ 
+ Example function that add two number
+
 ## Step 1: Organize Your Project
 
 Create a directory structure for your project:
@@ -32,7 +34,7 @@ Inside the DEBIAN directory, create a control file:
 
     $ vim usr/include/ahedlib.h
 -
-    
+
     #ifndef MAIN_H
     #define MAIN_H
 
